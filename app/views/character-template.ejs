@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head')  %>
+
+<body>
+  <%- include('partials/header') %>
+  <main>
+    <h2><%- characterObject.name %></h2>
+    <div class="charsheet">
+      <div class="charsheet-head">
+        <div class="charsheet-img">
+          <img src="<%- characterObject.picture %>" alt="picture of <%- characterObject.name %>">
+        </div>
+        <div class="charsheet-head-title">
+          <h3>Name: <%- characterObject.name %></h3>
+          <p>Category: <%- characterObject.category %></p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

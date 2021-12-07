@@ -1,3 +1,103 @@
 body {
+  font-family: monospace;
   background-color: cornflowerblue;
+}
+
+header {
+  background-color: rgba(0,0,0,.3);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 2rem;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: aliceblue;
+  margin-bottom: 1rem;
+}
+
+p {
+  max-width: 400px;
+}
+
+.navlist {
+  display: flex;
+  align-items: center;
+}
+
+.navlist-item:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.navlist-item > a {
+  color: aliceblue;
+}
+
+main {
+  padding: 2rem;
+}
+
+.charlist {
+  display: inline-block;
+  list-style-type: square;
+  padding: 1.5rem;
+  background-color: rgba(255,255,255,.3);
+}
+
+.charlist-item:not(:last-child) {
+  margin-bottom: .3rem;
+}
+
+.charsheet {
+  padding: 1.5rem;
+  background-color: rgba(255,255,255,.3);
+  border: 1px solid rgba(255,255,255,.5);
+  display: inline-block;
+}
+
+.charsheet-head {
+  display: flex;
+  align-items: center;
+}
+
+.charsheet-img {
+  margin-right: 1.5rem;
+}
+
+.charsheet-img > img {
+  display: inline-block;
+  width: 70px;
+}
+
+.charsheet-head-title {
+  display: flex;
+  flex-direction: column;
+
+}
+.charsheet-head-title h3 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.charsheet-head-title p {
+  font-weight: bold;
+}
+
+.not-found-pipe {
+  position: absolute;
+  bottom: -5px;
+  left: calc(50% - 115px);
+  text-align: center;
+}
+
+.not-found-pipe img {
+  margin-top: 1.5rem;
 }

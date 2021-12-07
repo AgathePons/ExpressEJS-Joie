@@ -1,15 +1,19 @@
 const express = require('express');
 const router = require('./app/router');
-const server = express();
+const app = express();
 
-server.set('view engine', 'ejs');
-server.set('views', './app/views');
+app.set('view engine', 'ejs');
+app.set('views', './app/views');
 
-server.use(express.static('public'));
+app.use(express.static('public'));
 
-server.use(router);
+app.use(router);
+
+app.use(function (req, res, next) {
+  res.render('notFound');
+});
 
 const PORT = 3000;
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`linstening on ${PORT}`);
 });

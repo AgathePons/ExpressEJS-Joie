@@ -37,6 +37,45 @@ const characters = [
     maniability: 2.75,
     grip: 3.25,
     minitrbo: 1.75
+  },
+  {
+    idName: 'bowser',
+    name: 'Bowser',
+    category: 'heavy',
+    subcategory: 'heavy-3',
+    picture: 'https://www.eclypsia.com/content/Nintendo/MarioKart8Deluxe/Personnages/Bowser.png',
+    speed: 4.75,
+    acceleration: 2,
+    weight: 4.75,
+    maniability: 2.25,
+    grip: 3.25,
+    minitrbo: 1.75
+  },
+  {
+    idName: 'donkeykong',
+    name: 'Donkey Kong',
+    category: 'heavy',
+    subcategory: 'heavy-1',
+    picture: 'https://www.eclypsia.com/content/Nintendo/MarioKart8Deluxe/Personnages/DonkeyKong.png',
+    speed: 4.25,
+    acceleration: 2.25,
+    weight: 4.25,
+    maniability: 2.75,
+    grip: 3.5,
+    minitrbo: 2
+  },
+  {
+    idName: 'peach',
+    name: 'Peach',
+    category: 'medium',
+    subcategory: 'medium-2',
+    picture: 'https://www.eclypsia.com/content/Nintendo/MarioKart8Deluxe/Personnages/Peach.png',
+    speed: 3.25,
+    acceleration: 2.75,
+    weight: 3.25,
+    maniability: 3.75,
+    grip: 4,
+    minitrbo: 2.5
   }
 ];
 
