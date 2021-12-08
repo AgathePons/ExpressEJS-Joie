@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
+const characters = require('./data/marioKartCharacters');
+
 router.get('/', (req, res) => {
   res.render('index');
 });
 
 router.get('/characters', (req, res) => {
-  const characters = require('./data/marioKartCharacters');
   res.render('characters', {
     characters: characters
   });
@@ -14,10 +15,8 @@ router.get('/characters', (req, res) => {
 
 router.get('/characters/:characterName', (req, res) => {
   console.log(req.url);
-  const characters = require('./data/marioKartCharacters');
   // on cherche un perso par son nom
   const character = characters.find(character => character.idName === req.params.characterName);
-  console.log(character);
   if (character) {
     res.locals.characterObject = character;
     res.render('character-template', {
@@ -31,7 +30,11 @@ router.get('/characters/:characterName', (req, res) => {
 });
 
 router.get('/random-character', (req, res) => {
-  res.render('notImplementedYet');
+  const getRandomIndex = () => Math.floor(Math.random()* characters.length);
+  let randomIndex = getRandomIndex();
+  const character = characters[randomIndex];
+  res.locals.characterObject = character;
+  res.render('character-template');
 });
 
 router.use(function (req, res, next) {
