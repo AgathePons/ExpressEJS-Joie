@@ -91,6 +91,53 @@ main {
   font-weight: bold;
 }
 
+.charsheet-body {
+  display: flex;
+  margin-top: 1rem;
+  border: 1px solid black;
+
+}
+
+[class^="charsheet-body-"] {
+  padding: 1rem;
+}
+
+[class^="charsheet-body-"]:not(:last-child) {
+  margin-right: 2rem;
+}
+
+[class^="charsheet-body-"] .info-bloc {
+  display: flex;
+}
+
+[class^="charsheet-body-"] .info-bloc .info-bloc-key {
+  flex-grow: 1;
+  margin-right: 2rem;
+}
+
+[class^="charsheet-body-"] .info-bloc .info-bloc-value {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  background-color: aliceblue;
+  width: 3rem;
+}
+[class^="charsheet-body-"] .info-bloc .info-bloc-value::before {
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background-color: aliceblue;
+}
+
+[class^="charsheet-body-"] .info-bloc:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+
 .not-found-pipe {
   position: absolute;
   bottom: -5px;

@@ -10,7 +10,7 @@ const characters = [
     weight: 3.75,
     maniability: 3.25,
     grip: 3.75,
-    minitrbo: 2.25
+    miniturbo: 2.25
   },
   {
     idName: 'link',
@@ -23,7 +23,7 @@ const characters = [
     weight: 4.25,
     maniability: 2.75,
     grip: 3.5,
-    minitrbo: 2
+    miniturbo: 2
   },
   {
     idName: 'roiBoo',
@@ -36,7 +36,7 @@ const characters = [
     weight: 4.75,
     maniability: 2.75,
     grip: 3.25,
-    minitrbo: 1.75
+    miniturbo: 1.75
   },
   {
     idName: 'bowser',
@@ -49,7 +49,7 @@ const characters = [
     weight: 4.75,
     maniability: 2.25,
     grip: 3.25,
-    minitrbo: 1.75
+    miniturbo: 1.75
   },
   {
     idName: 'donkeykong',
@@ -62,7 +62,7 @@ const characters = [
     weight: 4.25,
     maniability: 2.75,
     grip: 3.5,
-    minitrbo: 2
+    miniturbo: 2
   },
   {
     idName: 'peach',
@@ -75,7 +75,7 @@ const characters = [
     weight: 3.25,
     maniability: 3.75,
     grip: 4,
-    minitrbo: 2.5
+    miniturbo: 2.5
   }
 ];
 

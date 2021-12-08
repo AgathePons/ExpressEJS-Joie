@@ -34,6 +34,10 @@ router.get('/random-character', (req, res) => {
   res.render('notImplementedYet');
 });
 
+router.use(function (req, res, next) {
+  res.render('notFound');
+});
+
 router.get('/favicon.ico', (req, res) => res.status(204));
 
 module.exports = router;
