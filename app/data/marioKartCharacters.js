@@ -13,6 +13,32 @@ const characters = [
     miniturbo: 2.25
   },
   {
+    idName: 'wario',
+    name: 'Wario',
+    category: 'heavy',
+    subcategory: 'heavy-3',
+    picture: 'https://www.eclypsia.com/content/Nintendo/MarioKart8Deluxe/Personnages/Wario.png',
+    speed: 4.75,
+    acceleration: 2,
+    weight: 4.75,
+    maniability: 2.25,
+    grip: 3.25,
+    miniturbo: 1.75
+  },
+  {
+    idName: 'tanuki',
+    name: 'Tanuki',
+    category: 'medium',
+    subcategory: 'medium-3',
+    picture: 'https://www.eclypsia.com/content/Nintendo/MarioKart8Deluxe/Personnages/Tanuki.png',
+    speed: 3.75,
+    acceleration: 2.75,
+    weight: 3.5,
+    maniability: 3.25,
+    grip: 3.75,
+    miniturbo: 2.25
+  },
+  {
     idName: 'link',
     name: 'Link',
     category: 'heavy',
