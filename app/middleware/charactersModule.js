@@ -6,8 +6,9 @@ const charactersModule = {
     const characters = require('../data/marioKartCharacters.json');
     const charactersListPage = true;
     const data = {
+      firstLevelPage: 'List of characters',
       characters: characters,
-      currentPage: charactersListPage
+      charactersListPage: charactersListPage
     };
     res.render('characters', data);
   },
@@ -18,19 +19,24 @@ const charactersModule = {
   characterDetail: (req, res, next) => {
     console.log(req.url);
     const characters = require('../data/marioKartCharacters.json');
-    const characterDetailPage = true;
+    const charactersListPage = true;
     // get character by name
     const character = characters.find(character => character.idName === req.params.characterName);
     if (character) {
       const data = {
+        firstLevelPage: 'List of characters',
+        secondLevelPage: character.name,
         character: character,
-        currentPage: characterDetailPage
+        charactersListPage: charactersListPage
       };
       res.render('character-template', data);
     } else {
       next();
     }
   },
+  /**
+   * render the page of 1 random character details
+   */
   randomCharacter: (req, res, next) => {
     const characters = require('../data/marioKartCharacters.json');
     const randomCharacterDetailPage = true;
@@ -38,9 +44,12 @@ const charactersModule = {
     const randomIndex = getRandomIndex();
     const character = characters[randomIndex];
     const data = {
+      firstLevelPage: 'Random character',
+      secondLevelPage: character.name,
       character: character,
-      currentPage: randomCharacterDetailPage
+      randomCharacterDetailPage: randomCharacterDetailPage
     };
+    console.log(character.name);
     res.render('character-template', data);
   }
 };

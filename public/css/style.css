@@ -32,12 +32,42 @@ p {
   align-items: center;
 }
 
+.navlist-item.active {
+  background-color: rgb(1, 1, 121);
+}
+
 .navlist-item:not(:last-child) {
   margin-right: 1.5rem;
 }
 
 .navlist-item > a {
   color: aliceblue;
+}
+
+.breadcrumb {
+  background-color: rgba(255,255,255,.3);
+  padding: .3rem 2rem;
+}
+
+.breadcrumb > ul {
+  display: flex;
+}
+
+.breadcrumb > ul > li:not(:first-child) {
+  position: relative;
+  padding-left: 30px;
+}
+
+.breadcrumb > ul > li:not(:first-child)::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  content: '';
+  width: 30px;
+  height: 1px;
+  background-color: aliceblue;
+
 }
 
 main {

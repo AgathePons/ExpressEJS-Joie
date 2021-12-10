@@ -1,17 +1,31 @@
 <header>
-  <h1>Bienvenue</h1>
+  <h1>Welcome!</h1>
   <nav>
     <ul class="navlist">
       
-      <li class="navlist-item">
+      <li class="navlist-item
+      <% if(locals.homePage) { %>
+        active
+      <% } %>
+      ">
         <a href="/">Mario Kart !!</a>
       </li>
-      <li class="navlist-item">
+      
+      <li class="navlist-item
+      <% if(locals.charactersListPage) { %>
+        active
+      <% } %>
+      ">
         <a href="/characters">List of Characters</a>
       </li>
-      <li class="navlist-item">
+      <li class="navlist-item
+      <% if(locals.randomCharacterDetailPage) { %>
+        active
+      <% } %>
+      ">
         <a href="/random-character">Random character</a>
       </li>
     </ul>
   </nav>
 </header>
+<%- include('breadcrumb') %>

@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
+const homePageModule = require('./middleware/homePageModule');
 const charactersModule = require('./middleware/charactersModule');
 
-router.get('/', (req, res) => {
-  res.render('index');
-});
+router.get('/', homePageModule.displayHomePage);
 
 router.get('/characters', charactersModule.characterList);
 
