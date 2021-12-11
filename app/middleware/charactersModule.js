@@ -51,6 +51,9 @@ const charactersModule = {
     };
     console.log(character.name);
     res.render('character-template', data);
+  },
+  searchCharacter: (req, res, next) => {
+    res.render('search-character');
   }
 };
 

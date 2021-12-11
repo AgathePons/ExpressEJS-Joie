@@ -74,6 +74,21 @@ main {
   padding: 2rem;
 }
 
+.home {
+  position: relative;
+  max-width: 400px;
+}
+
+.home-deco {
+  position: absolute;
+  right: -150px;
+  top: -60px;
+}
+
+.home-deco img {
+  max-width: 200px;
+}
+
 .charlist {
   display: inline-block;
   list-style-type: square;
