@@ -7,14 +7,18 @@
   <%- include('partials/header') %>
   <main>
     <h2>🔎 Search...</h2>
-    <ul class="charlist">
-      <li>Pouet</li>
-      <li>pouetttt</li>
-      <li>pouetttt</li>
-      <li>pouetttt</li>
-      <li>pouetttt</li>
-      <li>pouetttt</li>
-    </ul>
+    <form class="searchform" method="get" action="/search">
+      <label for="characterName">Name:</label>
+      <input type="text" id="characterName" name="characterName" value="<%= locals.searchTerm %>">
+      <button type="submit">🔎</button>
+    </form>
+    <div class="searchresults">
+      <% for (const character of charactersFilteredByName) {%>
+        <div class="charcard">
+          <h3><%= character.name %></h3>
+        </div>
+      <% } %>
+    </div>
   </main>
 </body>
 

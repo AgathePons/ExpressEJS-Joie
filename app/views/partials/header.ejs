@@ -25,7 +25,11 @@
       ">
         <a href="/random-character">Random character</a>
       </li>
-      <li class="navlist-item">
+      <li class="navlist-item
+      <% if(locals.searchCharacterPage) { %>
+        active
+      <% } %>
+      ">
         <a href="/search">Search character</a>
       </li>
     </ul>

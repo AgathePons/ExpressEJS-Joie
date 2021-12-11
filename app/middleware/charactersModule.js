@@ -3,7 +3,17 @@ const charactersModule = {
    * render the list of characters list
    */
   characterList: (req, res, next) => {
-    const characters = require('../data/marioKartCharacters.json');
+    let characters = require('../data/marioKartCharacters.json');
+    const compareCharacterName = (a, b) => {
+      if(a.name < b.name) {
+        return -1;
+      }
+      if(a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    };
+    characters = characters.sort(compareCharacterName);
     const charactersListPage = true;
     const data = {
       firstLevelPage: 'List of characters',
@@ -53,7 +63,23 @@ const charactersModule = {
     res.render('character-template', data);
   },
   searchCharacter: (req, res, next) => {
-    res.render('search-character');
+    const characters = require('../data/marioKartCharacters.json');
+    const searchCharacterPage = true;
+    let searchTerm = '';
+    if (req.query.characterName) {
+      searchTerm = req.query.characterName;
+    }
+    console.log('search:',searchTerm);
+    const charactersFilteredByName = characters.filter(
+      character => character.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    const data = {
+      firstLevelPage: 'Search character',
+      searchCharacterPage: searchCharacterPage,
+      searchTerm: searchTerm,
+      charactersFilteredByName: charactersFilteredByName
+    };
+    res.render('search-character', data);
   }
 };
 
