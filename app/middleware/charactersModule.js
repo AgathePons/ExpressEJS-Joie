@@ -5,10 +5,10 @@ const charactersModule = {
   characterList: (req, res, next) => {
     let characters = require('../data/marioKartCharacters.json');
     const compareCharacterName = (a, b) => {
-      if(a.name < b.name) {
+      if (a.name < b.name) {
         return -1;
       }
-      if(a.name > b.name) {
+      if (a.name > b.name) {
         return 1;
       }
       return 0;
@@ -65,20 +65,20 @@ const charactersModule = {
   searchCharacter: (req, res, next) => {
     const characters = require('../data/marioKartCharacters.json');
     const searchCharacterPage = true;
+    let data = {};
     let searchTerm = '';
     if (req.query.characterName) {
       searchTerm = req.query.characterName;
+      data.secondLevelPage = `🔎 ${searchTerm}`;
     }
-    console.log('search:',searchTerm);
+    console.log('search:', searchTerm);
     const charactersFilteredByName = characters.filter(
       character => character.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    const data = {
-      firstLevelPage: 'Search character',
-      searchCharacterPage: searchCharacterPage,
-      searchTerm: searchTerm,
-      charactersFilteredByName: charactersFilteredByName
-    };
+    data.firstLevelPage = 'Search character';
+    data.searchCharacterPage = searchCharacterPage;
+    data.searchTerm = searchTerm;
+    data.charactersFilteredByName = charactersFilteredByName;
     res.render('search-character', data);
   }
 };

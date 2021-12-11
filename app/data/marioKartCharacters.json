@@ -13,6 +13,19 @@
     "miniturbo": 2.25
   },
   {
+    "idName": "luigi",
+    "name": "Luigi",
+    "category": "medium",
+    "subcategory": "medium-4",
+    "picture": "https://www.eclypsia.com/content/Nintendo/MarioKart8Deluxe/Personnages/Luigi.png",
+    "speed": 3.75,
+    "acceleration": 2.5,
+    "weight": 3.75,
+    "maniability": 3.25,
+    "grip": 3.75,
+    "miniturbo": 2.25
+  },
+  {
     "idName": "wario",
     "name": "Wario",
     "category": "heavy",
@@ -31,6 +44,19 @@
     "category": "medium",
     "subcategory": "medium-3",
     "picture": "https://www.eclypsia.com/content/Nintendo/MarioKart8Deluxe/Personnages/Tanuki.png",
+    "speed": 3.75,
+    "acceleration": 2.75,
+    "weight": 3.5,
+    "maniability": 3.25,
+    "grip": 3.75,
+    "miniturbo": 2.25
+  },
+  {
+    "idName": "villageois",
+    "name": "Villageois",
+    "category": "medium",
+    "subcategory": "medium-3",
+    "picture": "https://www.eclypsia.com/content/Nintendo/MarioKart8Deluxe/Personnages/Villageois.png",
     "speed": 3.75,
     "acceleration": 2.75,
     "weight": 3.5,
@@ -102,5 +128,31 @@
     "maniability": 3.75,
     "grip": 4,
     "miniturbo": 2.5
+  },
+  {
+    "idName": "yoshi",
+    "name": "Yoshi",
+    "category": "medium",
+    "subcategory": "medium-2",
+    "picture": "https://www.eclypsia.com/content/Nintendo/MarioKart8Deluxe/Personnages/Yoshi.png",
+    "speed": 3.25,
+    "acceleration": 2.75,
+    "weight": 3.25,
+    "maniability": 3.75,
+    "grip": 4,
+    "miniturbo": 2.5
+  },
+  {
+    "idName": "marioMetal",
+    "name": "Mario Métal",
+    "category": "heavy",
+    "subcategory": "heavy-2",
+    "picture": "https://www.eclypsia.com/content/Nintendo/MarioKart8Deluxe/Personnages/MarioMetal.png",
+    "speed": 4.25,
+    "acceleration": 2,
+    "weight": 4.75,
+    "maniability": 2.75,
+    "grip": 3.25,
+    "miniturbo": 1.75
   }
 ]
