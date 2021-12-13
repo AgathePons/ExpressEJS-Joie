@@ -193,6 +193,14 @@ main {
   margin-bottom: 1.5rem;
 }
 
+.searchform button {
+  font-family: monospace;
+}
+
+.searchform button:hover {
+  cursor: pointer;
+}
+
 .searchresults {
   display: flex;
   flex-wrap: wrap;

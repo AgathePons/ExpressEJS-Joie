@@ -2,7 +2,7 @@ const charactersModule = {
   /**
    * render the list of characters list
    */
-  characterList: (req, res, next) => {
+  characterList: (req, res) => {
     let characters = require('../data/marioKartCharacters.json');
     const compareCharacterName = (a, b) => {
       if (a.name < b.name) {
@@ -47,7 +47,7 @@ const charactersModule = {
   /**
    * render the page of 1 random character details
    */
-  randomCharacter: (req, res, next) => {
+  randomCharacter: (req, res) => {
     const characters = require('../data/marioKartCharacters.json');
     const randomCharacterDetailPage = true;
     const getRandomIndex = () => Math.floor(Math.random() * characters.length);
@@ -62,7 +62,7 @@ const charactersModule = {
     console.log(character.name);
     res.render('character-template', data);
   },
-  searchCharacter: (req, res, next) => {
+  searchCharacter: (req, res) => {
     const characters = require('../data/marioKartCharacters.json');
     const searchCharacterPage = true;
     let data = {};

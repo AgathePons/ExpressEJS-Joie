@@ -10,7 +10,7 @@
     <form class="searchform" method="get" action="/search">
       <label for="characterName">Name:</label>
       <input type="text" id="characterName" name="characterName" value="<%= locals.searchTerm %>">
-      <button type="submit">🔎</button>
+      <button type="submit">Let's Go!</button>
     </form>
     <div class="searchresults">
       <% for (const character of charactersFilteredByName) {%>

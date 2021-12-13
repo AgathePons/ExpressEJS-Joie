@@ -5,11 +5,7 @@
     //"es6": true
   },
   "parserOptions": {
-    //"ecmaVersion": 2017
-  },
-  "htmlhint.options": {
-    "spec-char-escape": false,
-    "doctype-first": false
+    "ecmaVersion": 2017
   },
   "extends": "eslint:recommended",
   "rules": {
