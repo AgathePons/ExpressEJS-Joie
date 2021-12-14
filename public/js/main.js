@@ -1,14 +1,27 @@
 const app = {
-  navBtn: document.getElementById('navBtn'),
-  navList: document.getElementById('navList'),
 
   displayMenu: () => {
+    const navList = document.getElementById('navList');
     navList.classList.toggle('opened');
+  },
+  displayCharacterSearchDetail: (e) => {
+    
+    const clickedTarget = e.target;
+    console.log('clic on', e.target);
+    const clickedCharCard = clickedTarget.closest('.charcard');
+    console.log('elt:', clickedCharCard);
+    clickedCharCard.classList.toggle('opened');
   },
 
   init: () => {
-    console.log(navBtn);
+    const navBtn = document.getElementById('navBtn');
     navBtn.addEventListener('click', app.displayMenu);
+
+    const charCards = document.getElementsByClassName('charcard');
+    console.log(charCards);
+    for (const charCard of charCards) {
+      charCard.addEventListener('click', app.displayCharacterSearchDetail);
+    }
   }
 };
 

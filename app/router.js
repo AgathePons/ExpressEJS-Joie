@@ -14,9 +14,9 @@ router.get('/random-character', charactersModule.randomCharacter);
 
 router.get('/search', charactersModule.searchCharacter);
 
-router.use(function (req, res) {
-  res.status(404).render('notFound');
-});
+// router.use(function (req, res) {
+//   res.status(404).render('notFound');
+// });
 
 router.get('/favicon.ico', (req, res) => res.status(204));
 

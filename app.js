@@ -9,6 +9,10 @@ app.use(express.static('public'));
 
 app.use(router);
 
+app.use(function (req, res) {
+  res.status(404).render('notFound');
+});
+
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`linstening on ${PORT}`);
