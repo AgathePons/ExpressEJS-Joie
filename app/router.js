@@ -14,7 +14,7 @@ router.get('/random-character', charactersModule.randomCharacter);
 
 router.get('/search', charactersModule.searchCharacter);
 
-router.use(function (req, res, next) {
+router.use(function (req, res) {
   res.status(404).render('notFound');
 });
 
