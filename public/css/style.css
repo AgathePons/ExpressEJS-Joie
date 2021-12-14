@@ -219,14 +219,10 @@ main {
 }
 
 .searchresults .charcard {
-  width: calc(50% - 3.8rem);
+  width: 100%;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   background-color: rgba(255,255,255,.3);
-}
-
-.searchresults .charcard:nth-child(odd) {
-  margin-right: 1.5rem;
 }
 
 .searchresults .charcard .charcard-btn > svg {
@@ -282,6 +278,12 @@ main {
   }
   [class^="charsheet-body-"]:not(:last-child) {
     margin-right: 2rem;
+  }
+  .searchresults .charcard {
+    width: calc(50% - 3.8rem);
+  }
+  .searchresults .charcard:nth-child(odd) {
+    margin-right: 1.5rem;
   }
 }
 
@@ -352,5 +354,8 @@ main {
     width: 100%;
     flex-grow: 1;
     margin-top: .5rem;
+  }
+  .searchresults .charcard {
+    width: 100%;
   }
 }
