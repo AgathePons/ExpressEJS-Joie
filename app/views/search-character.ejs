@@ -15,13 +15,21 @@
     <div class="searchresults">
       <% for (const character of charactersFilteredByName) {%>
         <div class="charcard">
-          <button class="charcard-btn" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-            </svg>
-          </button>
-          <h3><%= character.name %></h3>
-          <%- include('partials/charSheetBody', {character: character})  %>
+          <div class="charcard-header">
+            <h3><%= character.name %></h3>
+            <div class="charsheet-img">
+              <img src="<%= character.picture %>" alt="picture of <%- character.name %>">
+            </div>
+          </div>
+          <div class="charcard-body">
+            <button class="charcard-btn" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </button>
+            <p>Category: <%- character.category %></p>
+            <%- include('partials/charSheetBody', {character: character})  %>
+          </div>
         </div>
       <% } %>
     </div>
