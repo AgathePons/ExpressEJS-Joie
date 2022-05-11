@@ -1,5 +1,7 @@
 # Mario Kart Characters
 
+The project is up **[here](http://ns3251440.ip-87-98-217.eu:3000/)**
+
 ## What is this project?
 
 It is a simple project using **NodeJS**, **Express**, and **EJS** to test and practice.  
